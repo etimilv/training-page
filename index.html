@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Timo's Training</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg: #fafafa; --text: #1a1a1a; --text-secondary: #6b6b6b;
+      --accent: #2563eb; --border: #e5e5e5; --card: #ffffff;
+      --green: #16a34a; --yellow: #ca8a04; --red: #dc2626; --purple: #9333ea;
+      --font-serif: 'Instrument Serif', Georgia, serif;
+      --font-sans: 'Instrument Sans', system-ui, sans-serif;
+    }
+    html.dark {
+      --bg: #0f1117; --text: #e2e8f0; --text-secondary: #94a3b8;
+      --border: #2d3142; --card: #1a1d27;
+      --green: #4ade80; --yellow: #facc15; --red: #f87171; --purple: #c084fc;
+    }
+
+    html { background: var(--bg); color: var(--text); font-family: var(--font-sans); font-size: 16px; line-height: 1.6; transition: background 0.3s; }
+    body { max-width: 760px; margin: 0 auto; padding: 0 20px; }
+
+    nav {
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 24px 0; border-bottom: 1px solid var(--border); margin-bottom: 40px;
+    }
+    .nav-logo { font-family: var(--font-serif); font-size: 18px; color: var(--text); text-decoration: none; }
+    .dark-toggle { background: none; border: none; cursor: pointer; color: var(--text-secondary); font-size: 16px; padding: 4px; }
+    .dark-toggle:hover { color: var(--text); }
+
+    .hero { margin-bottom: 48px; }
+    .hero h1 { font-family: var(--font-serif); font-size: clamp(32px, 5vw, 48px); font-weight: 400; line-height: 1.15; margin-bottom: 8px; }
+    .hero-sub { font-size: 15px; color: var(--text-secondary); }
+    .hero-sub span { font-weight: 600; color: var(--accent); }
+
+    .section-title {
+      font-size: 11px; font-weight: 600; letter-spacing: 0.08em;
+      text-transform: uppercase; color: var(--text-secondary); margin-bottom: 12px;
+    }
+
+    /* Goals */
+    .goal-card { display: flex; justify-content: space-between; align-items: center; padding: 12px 16px; border: 1px solid var(--border); border-radius: 10px; margin-bottom: 8px; background: var(--card); }
+    .goal-name { font-size: 15px; font-weight: 600; }
+    .goal-date { font-size: 12px; color: var(--text-secondary); margin-top: 2px; }
+    .goal-badge { font-size: 11px; font-weight: 700; padding: 4px 10px; border-radius: 20px; }
+    .badge-big { background: var(--accent); color: white; }
+    .badge-medium { background: var(--yellow); color: #1a1a1a; }
+    .badge-small { background: var(--red); color: white; }
+    .badge-done { background: var(--green); color: white; }
+
+    /* Block */
+    .block-card { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 16px; margin-top: 16px; }
+    .block-name { font-size: 15px; font-weight: 700; }
+    .block-meta { font-size: 12px; color: var(--text-secondary); margin-bottom: 10px; text-transform: uppercase; letter-spacing: 0.04em; }
+    .block-bar-bg { background: var(--bg); border-radius: 8px; height: 8px; margin-bottom: 6px; }
+    .block-bar { background: linear-gradient(90deg, var(--accent), #60a5fa); border-radius: 8px; height: 8px; }
+    .block-pct { font-size: 12px; color: var(--text-secondary); text-align: right; }
+
+    /* Week plan */
+    .week-theme { font-size: 14px; color: var(--text-secondary); margin-bottom: 16px; margin-top: -4px; }
+    .day-card { margin-bottom: 12px; }
+    .day-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px; }
+    .day-name { font-size: 14px; font-weight: 700; }
+    .day-date { font-size: 12px; color: var(--text-secondary); }
+    .day-today .day-name { color: var(--accent); }
+    .day-content { background: var(--card); border: 1px solid var(--border); border-radius: 10px; padding: 12px 14px; }
+    .day-today .day-content { border-color: var(--accent); background: rgba(37,99,235,0.04); }
+    html.dark .day-today .day-content { background: rgba(37,99,235,0.08); }
+
+    .session { display: flex; align-items: flex-start; gap: 10px; padding: 8px 0; border-bottom: 1px solid var(--border); font-size: 14px; }
+    .session:last-child { border-bottom: none; padding-bottom: 0; }
+    .session-icon { font-size: 16px; flex-shrink: 0; margin-top: 1px; }
+    .session-type { font-weight: 700; font-size: 14px; }
+    .session-desc { color: var(--text-secondary); font-size: 13px; margin-top: 2px; }
+    .session-hr { font-size: 12px; color: var(--text-secondary); margin-top: 2px; }
+    .session-done { background: rgba(34,197,94,0.1); border: 1px solid rgba(34,197,94,0.25); border-radius: 8px; padding: 8px 10px; margin-bottom: 6px; }
+    .session-planned { background: rgba(59,130,246,0.08); border: 1px solid rgba(59,130,246,0.2); border-radius: 8px; padding: 8px 10px; margin-bottom: 6px; }
+    .session-rest { color: var(--text-secondary); font-size: 13px; padding: 4px 0; font-style: italic; }
+    .commute-sess { background: rgba(139,92,246,0.08); border: 1px solid rgba(139,92,246,0.2); border-radius: 8px; padding: 6px 10px; margin-top: 4px; font-size: 13px; display: flex; gap: 8px; align-items: center; }
+
+    /* Stats */
+    .stats-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; }
+    .stat-box { background: var(--card); border: 1px solid var(--border); border-radius: 10px; padding: 14px; text-align: center; }
+    .stat-value { font-size: 26px; font-weight: 700; color: var(--accent); }
+    .stat-label { font-size: 11px; text-transform: uppercase; letter-spacing: 0.06em; color: var(--text-secondary); margin-top: 4px; }
+
+    /* Zones */
+    .zones-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 6px; }
+    .zone-box { border-radius: 8px; padding: 10px 6px; text-align: center; }
+    .zone-name { font-weight: 700; font-size: 13px; }
+    .zone-hr { font-size: 11px; color: var(--text-secondary); margin-top: 2px; }
+    .zone-w { font-size: 10px; color: var(--text-secondary); }
+
+    /* Tips */
+    .tip { background: rgba(34,197,94,0.07); border: 1px solid rgba(34,197,94,0.2); border-radius: 10px; padding: 14px; margin-bottom: 10px; }
+    .tip-label { font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; color: var(--green); margin-bottom: 6px; }
+    .tip-text { font-size: 14px; line-height: 1.7; }
+
+    /* Athlete */
+    .ath-grid { display: flex; gap: 20px; flex-wrap: wrap; }
+    .ath-stat { display: flex; align-items: center; gap: 6px; font-size: 14px; }
+    .ath-label { color: var(--text-secondary); }
+    .ath-value { font-weight: 700; color: var(--accent); }
+
+    /* Footer */
+    footer { margin-top: 60px; padding: 24px 0; border-top: 1px solid var(--border); font-size: 12px; color: var(--text-secondary); display: flex; justify-content: space-between; }
+
+    /* Loading / error */
+    .state-msg { text-align: center; padding: 60px 0; color: var(--text-secondary); font-size: 14px; }
+
+    /* Animations */
+    @keyframes fadeUp { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+    .hero { animation: fadeUp 0.4s ease both; }
+    .content { animation: fadeUp 0.4s 0.1s ease both; }
+
+    @media (max-width: 500px) {
+      .stats-grid { grid-template-columns: repeat(2, 1fr); }
+      .zones-grid { grid-template-columns: repeat(3, 1fr); }
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a href="/" class="nav-logo">🏋️ Training</a>
+  <button class="dark-toggle" onclick="toggleDark()" aria-label="Toggle dark mode">🌙</button>
+</nav>
+
+<div id="app">
+  <div class="state-msg">Loading…</div>
+</div>
+
+<footer>
+  <span>© 2026 Timo</span>
+  <span id="updated">—</span>
+</footer>
+
+<script>
+  const DATA_URL = 'https://raw.githubusercontent.com/etimilv/training-page/main/data.json';
+  let data = null;
+
+  // ── Dark mode ──────────────────────────────────────────────────────────────
+  function toggleDark() {
+    const html = document.documentElement;
+    html.classList.toggle('dark');
+    const isDark = html.classList.contains('dark');
+    document.querySelector('.dark-toggle').textContent = isDark ? '☀️' : '🌙';
+    localStorage.setItem('theme', isDark ? 'dark' : 'light');
+  }
+  if (localStorage.getItem('theme') === 'dark') {
+    document.documentElement.classList.add('dark');
+    document.querySelector('.dark-toggle').textContent = '☀️';
+  }
+
+  // ── Helpers ────────────────────────────────────────────────────────────────
+  function r(string) { return string == null ? '—' : string; }
+
+  function goalBadge(cls) {
+    const map = { big: 'badge-big', medium: 'badge-medium', small: 'badge-small', done: 'badge-done' };
+    return map[cls] || 'badge-big';
+  }
+
+  function goalIcon(cls) {
+    const map = { big: '🎯', medium: '📅', small: '🔥', done: '✅' };
+    return map[cls] || '📌';
+  }
+
+  // ── Render ────────────────────────────────────────────────────────────────
+  function render(d) {
+    const today     = d.today;
+    const week      = d.week;
+    const goals     = d.goals || [];
+    const block     = d.block;
+    const ath       = d.athlete || {};
+    const stats     = d.week_stats || {};
+    const sessions  = week ? week.sessions : [];
+    const weekStart = week ? new Date(week.week_start + 'T00:00:00') : null;
+
+    let html = `<div class="hero">
+  <h1>🏋️ Timo's Training</h1>
+  <div class="hero-sub"><span>${d.today}</span>${week ? ' · Week ' + (week.week_number || '') : ''}</div>
+</div>
+
+<div class="content">
+  <div style="display:grid; grid-template-columns:1fr 1fr; gap:16px; margin-bottom:32px;">
+
+    <!-- Left: Goals -->
+    <div>
+      <div class="section-title">🎯 Goals</div>
+      ${goals.length ? goals.map(g => `
+      <div class="goal-card">
+        <div>
+          <div class="goal-name">${goalIcon(g.days_class)} ${r(g.name)}</div>
+          <div class="goal-date">${r(g.date)}</div>
+        </div>
+        <span class="goal-badge ${goalBadge(g.days_class)}">${g.days_label}</span>
+      </div>`).join('') : '<div class="state-msg" style="padding:20px">No goals set</div>'}
+    </div>
+
+    <!-- Right: Block -->
+    <div>
+      ${block ? `
+      <div class="section-title">🏋️ Current Block</div>
+      <div class="block-card">
+        <div class="block-name">${r(block.name)}</div>
+        <div class="block-meta">${r(block.phase)} · ${(block.focus || '').substring(0, 50)}</div>
+        <div class="block-bar-bg"><div class="block-bar" style="width:${block.progress_pct}%"></div></div>
+        <div class="block-pct">${block.progress_pct}% · ${block.days_remaining}d remaining</div>
+      </div>` : ''}
+
+      <!-- Stats -->
+      <div class="section-title" style="margin-top:20px">📊 This Week</div>
+      <div class="stats-grid">
+        <div class="stat-box"><div class="stat-value">${stats.sessions || 0}</div><div class="stat-label">Sessions</div></div>
+        <div class="stat-box"><div class="stat-value">${stats.km || 0}</div><div class="stat-label">KM</div></div>
+        <div class="stat-box"><div class="stat-value">${stats.hours || 0}</div><div class="stat-label">Hours</div></div>
+        <div class="stat-box"><div class="stat-value">${r(ath.vo2max)}</div><div class="stat-label">VO2max</div></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Week plan -->
+  ${week ? `<div class="section-title">📅 This Week${week.theme ? ' — ' + week.theme : ''}</div>` : ''}
+  <div class="week-plan" id="week-plan"></div>
+
+  <!-- Bottom row -->
+  <div style="display:grid; grid-template-columns:1fr 1fr; gap:16px; margin-top:32px;">
+
+    <!-- HR Zones -->
+    <div>
+      <div class="section-title">❤️ HR Zones (Bike)</div>
+      <div class="zones-grid">
+        <div class="zone-box" style="background:rgba(34,197,94,0.15)"><div class="zone-name">Z1</div><div class="zone-hr">≤105</div><div class="zone-w">≤150W</div></div>
+        <div class="zone-box" style="background:rgba(34,197,94,0.3)"><div class="zone-name">Z2</div><div class="zone-hr">105-126</div><div class="zone-w">150-220W</div></div>
+        <div class="zone-box" style="background:rgba(234,179,8,0.25)"><div class="zone-name">Z3</div><div class="zone-hr">126-147</div><div class="zone-w">220-269W</div></div>
+        <div class="zone-box" style="background:rgba(249,115,22,0.3)"><div class="zone-name">Z4</div><div class="zone-hr">147-164</div><div class="zone-w">269-299W</div></div>
+        <div class="zone-box" style="background:rgba(239,68,68,0.3)"><div class="zone-name">Z5</div><div class="zone-hr">164-187</div><div class="zone-w">299-371W</div></div>
+      </div>
+
+      <div class="section-title" style="margin-top:20px">💡 Coach Tips</div>
+      ${week && week.sessions && week.sessions.length ? `
+      <div class="tip"><div class="tip-label">This Week's Focus</div><div class="tip-text">${week.theme || 'Build consistency and aerobic base.'}</div></div>
+      <div class="tip"><div class="tip-label">Key Session</div><div class="tip-text">Saturday's hill sprints train fast-twitch fibers for explosive cuts and first steps. All-out 20sec bursts.</div></div>
+      <div class="tip"><div class="tip-label">Recovery = Training</div><div class="tip-text">Friday is empty by design. Your body adapts during rest, not during the work.</div></div>` : ''}
+    </div>
+
+    <!-- Athlete -->
+    <div>
+      <div class="section-title">👤 Athlete Profile</div>
+      <div class="ath-grid">
+        <div class="ath-stat"><span class="ath-label">FTP:</span><span class="ath-value">${r(ath.ftp_w)}W</span></div>
+        <div class="ath-stat"><span class="ath-label">W/kg:</span><span class="ath-value">${r(ath.ftp_wkg)}</span></div>
+        <div class="ath-stat"><span class="ath-label">Max HR:</span><span class="ath-value">${r(ath.max_hr)}</span></div>
+        <div class="ath-stat"><span class="ath-label">VO2max:</span><span class="ath-value">${r(ath.vo2max)}</span></div>
+        <div class="ath-stat"><span class="ath-label">Weight:</span><span class="ath-value">${r(ath.weight_kg)}kg</span></div>
+      </div>
+    </div>
+  </div>
+</div>`;
+
+    document.getElementById('app').innerHTML = html;
+
+    // Render week days
+    renderWeekDays(sessions, today, weekStart);
+
+    // Updated time
+    if (d.generated) {
+      const dt = new Date(d.generated);
+      document.getElementById('updated').textContent = 'Updated ' + dt.toLocaleString('en-GB', { day: 'numeric', month: 'short', hour: '2-digit', minute: '2-digit' });
+    }
+  }
+
+  function renderWeekDays(sessions, today, weekStart) {
+    const container = document.getElementById('week-plan');
+    if (!container || !weekStart) return;
+
+    let html = '';
+    const sessMap = {};
+    sessions.forEach(s => { sessMap[s.date] = s; });
+
+    for (let i = 0; i < 7; i++) {
+      const day     = new Date(weekStart);
+      day.setDate(day.getDate() + i);
+      const dayStr  = day.toISOString().split('T')[0];
+      const isToday = dayStr === today;
+      const dayName = day.toLocaleDateString('en-GB', { weekday: 'short' });
+      const dayDate = day.toLocaleDateString('en-GB', { day: 'numeric', month: 'short' });
+
+      const sess = sessMap[dayStr];
+      html += `<div class="day-card${isToday ? ' day-today' : ''}">
+  <div class="day-header">
+    <span class="day-name">${dayName}${isToday ? ' ⬅ TODAY' : ''}</span>
+    <span class="day-date">${dayDate}</span>
+  </div>
+  <div class="day-content">`;
+
+      if (sess) {
+        const done    = sess.completed;
+        const cls     = done ? 'session-done' : 'session-planned';
+        const icon    = done ? '✅' : '📋';
+        const dur     = sess.duration_min || 0;
+        const intensity = sess.intensity || '';
+
+        html += `<div class="${cls}" style="margin-bottom:${sess.commute ? '4px' : '0'}">
+    <span class="session-icon">${icon}</span>
+    <div>
+      <div class="session-type">${r(sess.type)}</div>
+      <div class="session-desc">${r(sess.description)}${dur ? ' · ' + dur + 'min' : ''}</div>
+      ${intensity && intensity !== 'Z2' ? `<div class="session-hr">${intensity}</div>` : ''}
+    </div>
+  </div>`;
+
+        if (sess.commute) {
+          html += `<div class="commute-sess">
+    <span>🚴</span>
+    <span style="color:var(--text-secondary);font-size:13px">${r(sess.commute)}</span>
+  </div>`;
+        }
+      } else {
+        html += `<div class="session-rest">😴 Rest day</div>`;
+      }
+
+      html += '</div></div>';
+    }
+
+    container.innerHTML = html;
+  }
+
+  // ── Load data ─────────────────────────────────────────────────────────────
+  async function init() {
+    try {
+      const res  = await fetch(DATA_URL + '?t=' + Date.now());
+      if (!res.ok) throw new Error('Failed to fetch data');
+      data       = await res.json();
+      render(data);
+    } catch (e) {
+      document.getElementById('app').innerHTML =
+        `<div class="state-msg">Could not load training data.<br><a href="https://github.com/etimilv/training-page/blob/main/data.json" target="_blank" style="color:var(--accent)">View data on GitHub</a></div>`;
+      console.error(e);
+    }
+  }
+
+  init();
+</script>
+
+</body>
+</html>

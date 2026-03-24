@@ -1,0 +1,370 @@
+{
+  "generated": "2026-03-24T22:16:00.839057Z",
+  "today": "2026-03-24",
+  "week": {
+    "week_start": "2026-03-24",
+    "week_number": 1,
+    "theme": "Rebuild consistency \u2014 adjusted after basketball",
+    "sessions": [
+      {
+        "id": "mon_01",
+        "day": "Monday",
+        "date": "2026-03-24",
+        "type": "Strength",
+        "slot": "Morning or Lunch",
+        "duration_min": 45,
+        "description": "Lower Body + Core \u2014 MISSED",
+        "focus": "Strength base, hip mobility, back health",
+        "intensity": "Moderate \u2014 focus on form",
+        "why": "Lower body strength is the engine for every cut, sprint and jump in ultimate. We start here because you need a stable base before we add speed work.",
+        "warmup": "5 min easy bike + 10 body weight squats + hip circles",
+        "exercises": [
+          {
+            "exercise": "Back Squat",
+            "sets": 3,
+            "reps": "8",
+            "weight_kg": null,
+            "rest": "2min between sets",
+            "notes": "Use a weight you could do 10 reps with. If form breaks, drop weight.",
+            "why_this": "The foundation of lower body strength. Builds quad/glute power for first-step explosiveness."
+          },
+          {
+            "exercise": "Romanian Deadlift",
+            "sets": 3,
+            "reps": "8",
+            "weight_kg": null,
+            "rest": "2min",
+            "notes": "Feel it in hamstrings, not lower back. Start light until you feel the hamstring stretch.",
+            "why_this": "Hamstrings are critical for sprinting and injury prevention. They control deceleration when you cut."
+          },
+          {
+            "exercise": "Walking Lunges",
+            "sets": 3,
+            "reps": "10 each leg",
+            "weight_kg": null,
+            "rest": "90sec",
+            "notes": "Long steps. Keep torso upright. If knee hurts, shorten the step.",
+            "why_this": "Unilateral strength mirrors how you move in sports. Essential for cutting lateral movements."
+          },
+          {
+            "exercise": "Plank",
+            "sets": 3,
+            "reps": "45 seconds",
+            "weight_kg": null,
+            "rest": "60sec",
+            "notes": "Neutral spine. Don't let hips sag. Breathe.",
+            "why_this": "Core stability is your foundation for all explosive movement. Keeps energy from leaking."
+          },
+          {
+            "exercise": "Back Extensions",
+            "sets": 3,
+            "reps": "12",
+            "weight_kg": null,
+            "rest": "60sec",
+            "notes": "Control the movement. Don't hyperextend. Keep back neutral at top.",
+            "why_this": "Protects lower back, builds endurance in spinal erectors for long games."
+          },
+          {
+            "exercise": "Hip Flexor Stretch",
+            "sets": 2,
+            "reps": "30 seconds each side",
+            "weight_kg": null,
+            "rest": "30sec",
+            "notes": "Couch stretch or kneeling hip flexor. Push hips forward.",
+            "why_this": "Counteracts sitting. Longer hip flexors = longer stride = faster sprinting."
+          }
+        ],
+        "commute": "Ride both ways: home\u2194work 24km Z2",
+        "status": "missed",
+        "notes": "Missed \u2014 carry to Wednesday",
+        "completed": false,
+        "commute_completed": false
+      },
+      {
+        "id": "tue_01",
+        "day": "Tuesday",
+        "date": "2026-03-25",
+        "type": "Basketball",
+        "slot": "21:00",
+        "duration_min": 96,
+        "description": "Basketball Training",
+        "focus": "Team practice",
+        "status": "completed",
+        "commute": "Ride both ways: home\u2194work 24km Z2",
+        "notes": "\u2705 Done \u2014 Night Workout 96min",
+        "completed": false,
+        "commute_completed": false
+      },
+      {
+        "id": "wed_01",
+        "day": "Wednesday",
+        "date": "2026-03-26",
+        "type": "Strength",
+        "slot": "Lunch or after work",
+        "duration_min": 45,
+        "description": "Lower Body + Core \u2014 make-up session",
+        "focus": "Strength base \u2014 replacing missed Mon session",
+        "intensity": "Moderate \u2014 focus on form",
+        "why": "Monday's lower body session was missed. This replaces it. Lower body strength is still the priority \u2014 it was moved from Mon to Wed.",
+        "warmup": "5 min easy bike + 10 body weight squats + hip circles",
+        "exercises": [
+          {
+            "exercise": "Back Squat",
+            "sets": 3,
+            "reps": "8",
+            "weight_kg": null,
+            "rest": "2min between sets",
+            "notes": "Use a weight you could do 10 reps with. If form breaks, drop weight.",
+            "why_this": "The foundation of lower body strength. Builds quad/glute power for first-step explosiveness."
+          },
+          {
+            "exercise": "Romanian Deadlift",
+            "sets": 3,
+            "reps": "8",
+            "weight_kg": null,
+            "rest": "2min",
+            "notes": "Feel it in hamstrings, not lower back. Start light until you feel the hamstring stretch.",
+            "why_this": "Hamstrings are critical for sprinting and injury prevention. They control deceleration when you cut."
+          },
+          {
+            "exercise": "Walking Lunges",
+            "sets": 3,
+            "reps": "10 each leg",
+            "weight_kg": null,
+            "rest": "90sec",
+            "notes": "Long steps. Keep torso upright. If knee hurts, shorten the step.",
+            "why_this": "Unilateral strength mirrors how you move in sports. Essential for cutting lateral movements."
+          },
+          {
+            "exercise": "Plank",
+            "sets": 3,
+            "reps": "45 seconds",
+            "weight_kg": null,
+            "rest": "60sec",
+            "notes": "Neutral spine. Don't let hips sag. Breathe.",
+            "why_this": "Core stability is your foundation for all explosive movement."
+          },
+          {
+            "exercise": "Back Extensions",
+            "sets": 3,
+            "reps": "12",
+            "weight_kg": null,
+            "rest": "60sec",
+            "notes": "Control the movement. Don't hyperextend. Keep back neutral at top.",
+            "why_this": "Protects lower back, builds endurance in spinal erectors for long games."
+          },
+          {
+            "exercise": "Hip Flexor Stretch",
+            "sets": 2,
+            "reps": "30 seconds each side",
+            "weight_kg": null,
+            "rest": "30sec",
+            "notes": "Couch stretch or kneeling hip flexor. Push hips forward.",
+            "why_this": "Counteracts sitting. Longer hip flexors = longer stride = faster sprinting."
+          }
+        ],
+        "commute": "Ride both ways: home\u2194work 24km Z2",
+        "notes": "Swapped from Monday. No VO2max today \u2014 you're still recovering from basketball tonight.",
+        "completed": false,
+        "commute_completed": false
+      },
+      {
+        "id": "thu_01",
+        "day": "Thursday",
+        "date": "2026-03-27",
+        "type": "Strength",
+        "slot": "Lunch or after work",
+        "duration_min": 45,
+        "description": "Upper Body + Core",
+        "focus": "Upper body strength, shoulder health, rotational power",
+        "intensity": "Moderate \u2014 focus on form",
+        "why": "Upper body strength gives you the power to outmuscle defenders and protects your shoulder from throwing overuse injuries.",
+        "warmup": "5min easy cardio + arm circles + band pull-aparts",
+        "exercises": [
+          {
+            "exercise": "Bench Press",
+            "sets": 3,
+            "reps": "8",
+            "weight_kg": null,
+            "rest": "2min",
+            "notes": "Full range of motion. Retract shoulder blades before pressing.",
+            "why_this": "Push strength for outmuscling defenders and fighting through contact."
+          },
+          {
+            "exercise": "Pull-ups or Lat Pulldown",
+            "sets": 3,
+            "reps": "8",
+            "weight_kg": null,
+            "rest": "2min",
+            "notes": "If pull-ups are hard, use band assist or lat pulldown. Full dead hang.",
+            "why_this": "Most athletes are weak in pulling. This prevents shoulder imbalance and injury."
+          },
+          {
+            "exercise": "Overhead Press",
+            "sets": 3,
+            "reps": "8",
+            "weight_kg": null,
+            "rest": "2min",
+            "notes": "Press straight up. Don't excessively arch back.",
+            "why_this": "Shoulder stability for throwing. More stable shoulder = more powerful throws."
+          },
+          {
+            "exercise": "Bent Over Rows",
+            "sets": 3,
+            "reps": "10",
+            "weight_kg": null,
+            "rest": "90sec",
+            "notes": "Hinge at hips ~45\u00b0. Squeeze shoulder blades together at top.",
+            "why_this": "Upper back strength maintains posture in long games and protects throwing shoulder."
+          },
+          {
+            "exercise": "Plank Variations",
+            "sets": 3,
+            "reps": "45 seconds",
+            "weight_kg": null,
+            "rest": "60sec",
+            "notes": "Front plank + side plank each side. Neutral spine.",
+            "why_this": "Core stability for throwing, cutting, and absorbing contact."
+          },
+          {
+            "exercise": "Russian Twists",
+            "sets": 3,
+            "reps": "20 total (10 each side)",
+            "weight_kg": null,
+            "rest": "60sec",
+            "notes": "Controlled rotation. Hold a weight plate if too easy.",
+            "why_this": "Rotational core strength is essential for throwing power and spinal stability."
+          }
+        ],
+        "commute": "Ride both ways: home\u2194work 24km Z2",
+        "notes": "Keep as planned. Upper body after lower body is good split.",
+        "completed": false,
+        "commute_completed": false
+      },
+      {
+        "id": "fri_01",
+        "day": "Friday",
+        "date": "2026-03-28",
+        "type": "Recovery",
+        "slot": "Flexible",
+        "duration_min": 0,
+        "description": "Recovery day \u2014 no structured training",
+        "focus": "Active recovery, mobility, sauna",
+        "why": "Recovery is when adaptation happens. Friday lets you absorb the week's work before Saturday's speed session.",
+        "exercises": [],
+        "commute": "Ride both ways: home\u2194work 24km Z2",
+        "notes": "Sauna if available. Light walk. Foam rolling. Keep it easy.",
+        "completed": false,
+        "commute_completed": false
+      },
+      {
+        "id": "sat_01",
+        "day": "Saturday",
+        "date": "2026-03-29",
+        "type": "Hill Sprints",
+        "slot": "Morning",
+        "duration_min": 30,
+        "description": "8\u00d720sec all-out / 2min recovery",
+        "focus": "Max sprint power and acceleration",
+        "intensity": "MAXIMUM \u2014 all-out",
+        "why": "Hill sprints are the most effective way to develop max sprint speed without impact. In ultimate, your ability to explode from 0 to top speed in 1-2 steps determines whether you get open.",
+        "warmup": "10min easy jog or bike",
+        "main_set": "8 \u00d7 20 seconds SPRINT up hill\nWalk/jog back down to start\n2min rest between reps",
+        "cooldown": "5min walk",
+        "exercises": [],
+        "commute": null,
+        "notes": "These should feel VERY hard. True max effort. 2 per week maximum \u2014 this is high neuromuscular stress. Saturday = day before basketball game. Fresh legs for tomorrow.",
+        "completed": false
+      },
+      {
+        "id": "sun_01",
+        "day": "Sunday",
+        "date": "2026-03-30",
+        "type": "Basketball Game",
+        "slot": "All day",
+        "duration_min": 90,
+        "description": "\ud83c\udfc0 BASKETBALL GAME DAY",
+        "focus": "Competition \u2014 treat as game, not training",
+        "intensity": "Variable \u2014 game effort",
+        "why": "You have a basketball game. Don't do a long Z2 ride today \u2014 you'll need your legs for the game. If anything, do a very light 20min walk or stretch in the morning.",
+        "exercises": [],
+        "commute": null,
+        "notes": "No structured training. Game is the session. Stay hydrated, eat well. Rest day after.",
+        "completed": false
+      }
+    ]
+  },
+  "goals": [
+    {
+      "id": 1,
+      "name": "EUCS Elite Invite Leuven",
+      "date": "2026-05-23",
+      "location": null,
+      "priority": 1,
+      "notes": null,
+      "status": "upcoming",
+      "created_at": "2026-03-24 18:58:20",
+      "days_label": "60d",
+      "days_class": "big",
+      "days_until": 60
+    },
+    {
+      "id": 2,
+      "name": "WFDF World Ultimate Masters Club Championships Nottingham",
+      "date": "2026-06-28",
+      "location": null,
+      "priority": 2,
+      "notes": null,
+      "status": "upcoming",
+      "created_at": "2026-03-24 18:58:20",
+      "days_label": "96d",
+      "days_class": "big",
+      "days_until": 96
+    },
+    {
+      "id": 3,
+      "name": "WUCC (World Ultimate Club Championships)",
+      "date": "2026-08-15",
+      "location": null,
+      "priority": 3,
+      "notes": null,
+      "status": "upcoming",
+      "created_at": "2026-03-24 18:58:20",
+      "days_label": "144d",
+      "days_class": "big",
+      "days_until": 144
+    }
+  ],
+  "block": {
+    "id": 1,
+    "name": "Base Phase 1 \u2014 Aerobic Foundation",
+    "start_date": "2026-03-24",
+    "end_date": "2026-04-20",
+    "phase": "base",
+    "focus": "Build aerobic base, strength foundation, re-establish consistency",
+    "week_count": 4,
+    "status": "active",
+    "notes": "Post-illness rebuilding. Focus on consistency and volume. Keep intensity moderate.",
+    "created_at": "2026-03-24 18:58:20",
+    "progress_pct": 0,
+    "days_remaining": 27
+  },
+  "athlete": {
+    "id": 22865516,
+    "name": "Timo Ilves",
+    "height_cm": 198,
+    "weight_kg": 92.0,
+    "age": 38,
+    "sport": "Ultimate Frisbee",
+    "max_hr": 184,
+    "ftp_w": 285,
+    "vo2max": 56.1,
+    "ftp_wkg": 3.1,
+    "updated_at": "2026-03-24 18:58:20"
+  },
+  "week_stats": {
+    "sessions": 0,
+    "km": 0,
+    "hours": 0
+  }
+}
