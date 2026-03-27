@@ -1,6 +1,6 @@
 {
-  "generated": "2026-03-27T08:49:19.645438Z",
-  "today": "2026-03-27",
+  "generated": "2026-03-27T23:29:10.699935Z",
+  "today": "2026-03-28",
   "week": {
     "week_start": "2026-03-23",
     "week_number": 12,
@@ -80,9 +80,9 @@
       "notes": null,
       "status": "upcoming",
       "created_at": "2026-03-24 18:58:20",
-      "days_label": "57d",
+      "days_label": "56d",
       "days_class": "big",
-      "days_until": 57
+      "days_until": 56
     },
     {
       "id": 2,
@@ -93,9 +93,9 @@
       "notes": null,
       "status": "upcoming",
       "created_at": "2026-03-24 18:58:20",
-      "days_label": "93d",
+      "days_label": "92d",
       "days_class": "big",
-      "days_until": 93
+      "days_until": 92
     },
     {
       "id": 3,
@@ -106,9 +106,9 @@
       "notes": null,
       "status": "upcoming",
       "created_at": "2026-03-24 18:58:20",
-      "days_label": "141d",
+      "days_label": "140d",
       "days_class": "big",
-      "days_until": 141
+      "days_until": 140
     }
   ],
   "block": {
@@ -122,8 +122,8 @@
     "status": "active",
     "notes": "Post-illness rebuilding. Focus on consistency and volume. Keep intensity moderate.",
     "created_at": "2026-03-24 18:58:20",
-    "progress_pct": 11,
-    "days_remaining": 24
+    "progress_pct": 14,
+    "days_remaining": 23
   },
   "athlete": {
     "id": 22865516,
