@@ -1,50 +1,95 @@
 {
-  "generated": "2026-03-27T23:29:10.699935Z",
-  "today": "2026-03-28",
+  "generated": "2026-03-31T20:50:39.699715Z",
+  "today": "2026-03-31",
   "week": {
-    "week_start": "2026-03-23",
-    "week_number": 12,
-    "theme": "Rebuild consistency \u2014 basketball Tuesday, Sunday game day",
+    "week_start": "2026-03-30",
+    "week_number": 13,
+    "theme": "Week 1: Foundation \u2014 base building after basketball",
     "sessions": [
       {
-        "date": "2026-03-23",
+        "date": "2026-03-30",
         "type": "Strength",
         "description": "Lower Body + Core",
         "duration_min": 45,
         "intensity": "Moderate",
-        "completed": false
-      },
-      {
-        "date": "2026-03-24",
-        "type": "Basketball",
-        "description": "\ud83c\udfc0 Basketball Training",
-        "duration_min": 90,
-        "intensity": "High",
         "completed": false,
-        "actual": "96min, HR 138 avg"
+        "exercises": [
+          {
+            "exercise": "Goblet Squat",
+            "sets": 3,
+            "reps": 10,
+            "weight_kg": 20,
+            "why_this": "Safer for back and knee than barbell back squat. Focus on depth and knee tracking."
+          },
+          {
+            "exercise": "Romanian Deadlift",
+            "sets": 3,
+            "reps": 10,
+            "weight_kg": 30,
+            "why_this": "Dumbbells, hip hinge. Keep back neutral. Hamstring focus."
+          },
+          {
+            "exercise": "Bulgarian Split Squat",
+            "sets": 3,
+            "reps": 8,
+            "weight_kg": 8,
+            "why_this": "Dumbbells. Replaces walking lunges - easier on knees. Unilateral strength."
+          },
+          {
+            "exercise": "Plank",
+            "sets": 3,
+            "reps": 45,
+            "weight_kg": null,
+            "why_this": "Core stability. Hold for 45sec, rest 60sec between sets."
+          },
+          {
+            "exercise": "Back Extensions",
+            "sets": 3,
+            "reps": 12,
+            "weight_kg": null,
+            "why_this": "Bodyweight or light. Protects lower back, builds posterior chain endurance."
+          },
+          {
+            "exercise": "Hip Flexor Stretch",
+            "sets": 2,
+            "reps": 30,
+            "weight_kg": null,
+            "why_this": "Counteracts sitting. 30sec each side after the main session."
+          }
+        ],
+        "notes": "INJURY NOTE: Back squat and bent over row avoided per injury log. All exercises selected to be knee and back friendly."
       },
       {
-        "date": "2026-03-25",
+        "date": "2026-03-31",
+        "type": "Recovery",
+        "description": "Commute + Optional light activity",
+        "duration_min": 0,
+        "intensity": "Z1-Z2",
+        "completed": false,
+        "commute": "Ride both ways: home \u2194 work 24km Z2",
+        "commute_completed": false
+      },
+      {
+        "date": "2026-04-01",
         "type": "Strength",
-        "description": "Lower Body + Core",
-        "duration_min": 45,
-        "intensity": "Moderate",
-        "completed": true,
-        "actual": "56min, HR avg 83"
-      },
-      {
-        "date": "2026-03-26",
-        "type": "Upper Body",
         "description": "Upper Body Strength",
         "duration_min": 30,
         "intensity": "Moderate (gym)",
-        "completed": false,
-        "actual": "39min, HR avg 91"
+        "completed": false
       },
       {
-        "date": "2026-03-27",
+        "date": "2026-04-02",
+        "type": "Intervals",
+        "description": "VO2max intervals on bike",
+        "duration_min": 40,
+        "intensity": "Z5 / All-out",
+        "completed": false,
+        "why": "Top-end power for ultimate frisbee"
+      },
+      {
+        "date": "2026-04-03",
         "type": "Recovery",
-        "description": "Recovery day \u2014 no structured training",
+        "description": "Recovery day \u2014 rest or very easy",
         "duration_min": 0,
         "intensity": "Rest",
         "completed": false,
@@ -52,21 +97,22 @@
         "commute_completed": false
       },
       {
-        "date": "2026-03-28",
-        "type": "Light Prep",
-        "description": "Light walk or stretch \u2014 pre-game",
-        "duration_min": 20,
-        "intensity": "Very easy",
-        "completed": false
+        "date": "2026-04-04",
+        "type": "Hill Sprints",
+        "description": "6\u00d720sec all-out hill sprints",
+        "duration_min": 30,
+        "intensity": "Z5 / All-out",
+        "completed": false,
+        "why": "Fast-twitch fibers for explosive cuts and first steps"
       },
       {
-        "date": "2026-03-29",
+        "date": "2026-04-05",
         "type": "Basketball",
-        "description": "\ud83c\udfc0 BASKETBALL GAME DAY",
-        "duration_min": 60,
-        "intensity": "Game pace",
+        "description": "\ud83c\udfc0 Basketball Training",
+        "duration_min": 90,
+        "intensity": "High",
         "completed": false,
-        "why": "Main competition \u2014 keep legs fresh"
+        "why": "Continue building game fitness"
       }
     ]
   },
@@ -80,9 +126,9 @@
       "notes": null,
       "status": "upcoming",
       "created_at": "2026-03-24 18:58:20",
-      "days_label": "56d",
+      "days_label": "53d",
       "days_class": "big",
-      "days_until": 56
+      "days_until": 53
     },
     {
       "id": 2,
@@ -93,9 +139,9 @@
       "notes": null,
       "status": "upcoming",
       "created_at": "2026-03-24 18:58:20",
-      "days_label": "92d",
+      "days_label": "89d",
       "days_class": "big",
-      "days_until": 92
+      "days_until": 89
     },
     {
       "id": 3,
@@ -106,9 +152,9 @@
       "notes": null,
       "status": "upcoming",
       "created_at": "2026-03-24 18:58:20",
-      "days_label": "140d",
+      "days_label": "137d",
       "days_class": "big",
-      "days_until": 140
+      "days_until": 137
     }
   ],
   "block": {
@@ -122,8 +168,8 @@
     "status": "active",
     "notes": "Post-illness rebuilding. Focus on consistency and volume. Keep intensity moderate.",
     "created_at": "2026-03-24 18:58:20",
-    "progress_pct": 14,
-    "days_remaining": 23
+    "progress_pct": 25,
+    "days_remaining": 20
   },
   "athlete": {
     "id": 22865516,
