@@ -1,53 +1,53 @@
 {
-  "generated": "2026-04-01T04:05:19.284202Z",
-  "today": "2026-04-01",
+  "generated": "2026-04-12T18:15:28.749467Z",
+  "today": "2026-04-12",
   "week": {
-    "week_start": "2026-03-30",
-    "week_number": 13,
-    "theme": "Week 1: Foundation \u2014 base building after basketball",
+    "week_start": "2026-04-06",
+    "week_number": 14,
+    "theme": "Week 2: Foundation \u2014 progressive overload, building base",
     "sessions": [
       {
-        "date": "2026-03-30",
+        "date": "2026-04-06",
         "type": "Strength",
-        "description": "Lower Body + Core",
+        "description": "Lower Body + Core (Week 2 progressive)",
         "duration_min": 45,
         "intensity": "Moderate",
         "completed": false,
         "exercises": [
           {
             "exercise": "Goblet Squat",
-            "sets": 3,
+            "sets": 4,
             "reps": 10,
-            "weight_kg": 20,
-            "why_this": "Safer for back and knee than barbell back squat. Focus on depth and knee tracking."
+            "weight_kg": 22,
+            "why_this": "Slight weight increase from Week 1. Focus on depth and knee tracking."
           },
           {
             "exercise": "Romanian Deadlift",
-            "sets": 3,
+            "sets": 4,
             "reps": 10,
-            "weight_kg": 30,
-            "why_this": "Dumbbells, hip hinge. Keep back neutral. Hamstring focus."
+            "weight_kg": 32,
+            "why_this": "Dumbbells, hip hinge. Slight weight increase. Hamstring focus."
           },
           {
             "exercise": "Bulgarian Split Squat",
             "sets": 3,
-            "reps": 8,
-            "weight_kg": 8,
-            "why_this": "Dumbbells. Replaces walking lunges - easier on knees. Unilateral strength."
+            "reps": 10,
+            "weight_kg": 10,
+            "why_this": "Dumbbells. Slight increase. Unilateral strength."
           },
           {
             "exercise": "Plank",
             "sets": 3,
-            "reps": 45,
+            "reps": 50,
             "weight_kg": null,
-            "why_this": "Core stability. Hold for 45sec, rest 60sec between sets."
+            "why_this": "Core stability. 5sec longer hold than Week 1."
           },
           {
             "exercise": "Back Extensions",
             "sets": 3,
-            "reps": 12,
+            "reps": 15,
             "weight_kg": null,
-            "why_this": "Bodyweight or light. Protects lower back, builds posterior chain endurance."
+            "why_this": "Bodyweight. Slight rep increase for endurance."
           },
           {
             "exercise": "Hip Flexor Stretch",
@@ -57,62 +57,76 @@
             "why_this": "Counteracts sitting. 30sec each side after the main session."
           }
         ],
-        "notes": "INJURY NOTE: Back squat and bent over row avoided per injury log. All exercises selected to be knee and back friendly."
+        "notes": "INJURY NOTE: Back squat and bent over row avoided per injury log. Progressive overload on main lifts. All exercises selected to be knee and back friendly.",
+        "status": "missed",
+        "actual_notes": "No Strava data"
       },
       {
-        "date": "2026-03-31",
+        "date": "2026-04-07",
         "type": "Recovery",
         "description": "Commute + Optional light activity",
         "duration_min": 0,
         "intensity": "Z1-Z2",
         "completed": false,
         "commute": "Ride both ways: home \u2194 work 24km Z2",
+        "status": "done",
+        "actual_notes": "Commute only",
         "commute_completed": false
       },
       {
-        "date": "2026-04-01",
+        "date": "2026-04-08",
         "type": "Strength",
-        "description": "Upper Body Strength",
+        "description": "Upper Body Strength (Week 2)",
         "duration_min": 30,
         "intensity": "Moderate (gym)",
-        "completed": false
+        "completed": true,
+        "actual_notes": "Quick gym 13min - very short session",
+        "status": "done"
       },
       {
-        "date": "2026-04-02",
+        "date": "2026-04-09",
         "type": "Intervals",
         "description": "VO2max intervals on bike",
         "duration_min": 40,
         "intensity": "Z5 / All-out",
         "completed": false,
-        "why": "Top-end power for ultimate frisbee"
+        "why": "Top-end power for ultimate frisbee",
+        "actual_notes": "Lunch workout 56min + commutes",
+        "status": "done"
       },
       {
-        "date": "2026-04-03",
+        "date": "2026-04-10",
         "type": "Recovery",
         "description": "Recovery day \u2014 rest or very easy",
         "duration_min": 0,
         "intensity": "Rest",
         "completed": false,
         "commute": "Ride both ways: home \u2194 work 24km Z2",
+        "actual_notes": "Football 72min HR135 - hard session",
+        "status": "done",
         "commute_completed": false
       },
       {
-        "date": "2026-04-04",
+        "date": "2026-04-11",
         "type": "Hill Sprints",
         "description": "6\u00d720sec all-out hill sprints",
         "duration_min": 30,
         "intensity": "Z5 / All-out",
         "completed": false,
-        "why": "Fast-twitch fibers for explosive cuts and first steps"
+        "why": "Fast-twitch fibers for explosive cuts and first steps",
+        "actual_notes": "No Strava data - likely skipped",
+        "status": "missed"
       },
       {
-        "date": "2026-04-05",
+        "date": "2026-04-12",
         "type": "Basketball",
         "description": "\ud83c\udfc0 Basketball Training",
         "duration_min": 90,
         "intensity": "High",
         "completed": false,
-        "why": "Continue building game fitness"
+        "why": "Continue building game fitness",
+        "actual_notes": "Rest day",
+        "status": "planned"
       }
     ]
   },
@@ -126,9 +140,9 @@
       "notes": null,
       "status": "upcoming",
       "created_at": "2026-03-24 18:58:20",
-      "days_label": "52d",
+      "days_label": "41d",
       "days_class": "big",
-      "days_until": 52
+      "days_until": 41
     },
     {
       "id": 2,
@@ -139,9 +153,9 @@
       "notes": null,
       "status": "upcoming",
       "created_at": "2026-03-24 18:58:20",
-      "days_label": "88d",
+      "days_label": "77d",
       "days_class": "big",
-      "days_until": 88
+      "days_until": 77
     },
     {
       "id": 3,
@@ -152,9 +166,9 @@
       "notes": null,
       "status": "upcoming",
       "created_at": "2026-03-24 18:58:20",
-      "days_label": "136d",
+      "days_label": "125d",
       "days_class": "big",
-      "days_until": 136
+      "days_until": 125
     }
   ],
   "block": {
@@ -168,8 +182,8 @@
     "status": "active",
     "notes": "Post-illness rebuilding. Focus on consistency and volume. Keep intensity moderate.",
     "created_at": "2026-03-24 18:58:20",
-    "progress_pct": 29,
-    "days_remaining": 19
+    "progress_pct": 70,
+    "days_remaining": 8
   },
   "athlete": {
     "id": 22865516,
@@ -185,8 +199,8 @@
     "updated_at": "2026-03-24 18:58:20"
   },
   "week_stats": {
-    "sessions": 4,
-    "km": 23.5,
-    "hours": 2
+    "sessions": 7,
+    "km": 36.6,
+    "hours": 4
   }
 }
